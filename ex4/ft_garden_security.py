@@ -28,15 +28,17 @@ class Plant:
         return (self._age)
 
     def show(self) -> None:
-        print(f"Plant Created: {self.name}: {self._height}cm, {self._age} days old")
+        print(f"{self.name}: {self._height}cm, {self._age} days old")
 
 
 if __name__ == "__main__":
     print("=== Garden Security System ===")
     rose = Plant("Rose", 15.0, 10)
+    print("Plant Created: ", end="")
     rose.show()
     rose.set_height(25.0)
     rose.set_age(30)
     rose.set_height(-12)
     rose.set_age(-15)
-    print(f"Current state: {rose.name}: {rose._height}cm, {rose._age} days old")
+    msg = f"Current state: {rose.name}:"
+    print(f"{msg} {rose._height}cm, {rose._age} days old")
